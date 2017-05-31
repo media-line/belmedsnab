@@ -1,0 +1,37 @@
+.icon-block {
+    text-align: center;
+    padding-bottom: 10px;
+
+    &__title {
+        font-size: 21px;
+        color: $black-light;
+    }
+
+    &__img {
+        height: 80px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    img {
+        max-width: 100px;
+        max-heigth: 70px;
+    }
+}
+
+@media (max-width: $tablet-point) {
+    .icon-block {
+        &__title {
+            font-size: 18px;
+        }
+    }
+}
+
+@media (max-width: $mobile-point) {
+    .icon-block {
+        &__title {
+            font-size: 15px;
+        }
+    }
+}

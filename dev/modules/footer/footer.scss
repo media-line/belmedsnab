@@ -1,0 +1,262 @@
+.footer {
+    background: linear-gradient(to bottom, $blue, $blue-light, $blue);
+
+    &__container {
+        width: 1200px;
+        margin-left: auto;
+        margin-right: auto;
+        display: flex;
+        position: relative;
+    }
+
+    &__logo {
+        width: 210px;
+        min-width: 210px;
+        text-align: center;
+
+        img {
+            max-width: 95%;
+        }
+    }
+
+    &__menu {
+        display: flex;
+        align-items: center;
+    }
+
+    &__menu-block {
+        display: flex;
+        align-items: center;
+        padding-bottom: 25px;
+    }
+
+    &__copy {
+        font-family: 'trebuchetms';
+        color: $white;
+        font-size: 14px;
+        display: flex;
+        justify-content: space-between;
+        padding-bottom: 15px;
+    }
+
+    &__medialine {
+        font-family: sans-serif;
+        font-weight: 300;
+        font-size: 13px;
+    }
+
+    &__medialine-link {
+        color: $green;
+        text-decoration: none;
+        @include link-decoration ($green, 1px, -1px, 0.3s);
+        font-weight: 400;
+
+        &:hover {
+            color: $green;
+        }
+    }
+
+    &__partners {
+        width: 210px;
+        min-width: 210px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        &_mobile {
+            display: none;
+        }
+    }
+
+    &__partner {
+        & + .footer__partner {
+            padding-top: 15px;
+        }
+
+        img {
+            max-width: 90%;
+        }
+    }
+
+    &__contacts {
+        font-family: 'trebuchetms';
+        font-size: 14px;
+        color: $white;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        line-height: 1.3;
+
+        a {
+            color: $white;
+            text-decoration: none;
+            @include link-decoration ($white, 1px, -1px, 0.3s);
+            font-weight: 400;
+        }
+
+        p {
+            padding: 0;
+        }
+    }
+
+    &__info {
+        position: relative;
+        padding-top: 20px;
+    }
+
+    &__copy {
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: 0;
+    }
+}
+
+@media (max-width: $small-device-point) {
+    .footer {
+        &__container {
+            width: $container-small;
+        }
+
+        &__partners {
+            width: 150px;
+            min-width: 150px;
+        }
+
+        &__contacts {
+            min-width: 250px;
+            width: 250px;
+        }
+
+        &__logo {
+            min-width: 140px;
+            width: 140px;
+
+            img {
+                max-width: 90%;
+            }
+        }
+
+        &__copy {
+            font-size: 11.5px;
+        }
+
+        &__medialine {
+            font-size: 11.5px;
+        }
+    }
+}
+
+@media (max-width: $tablet-point) {
+    .footer {
+        &__container {
+            width: $container-table;
+            display: block;
+            padding-bottom: 40px;
+        }
+
+        &__info {
+            width: 100%;
+            position: static;
+        }
+
+        &__menu-block {
+            padding-bottom: 0;
+            justify-content: space-between;
+        }
+
+        &__partners {
+            display: inline-block;
+            vertical-align: middle;
+            width: 50%;
+            min-width: 50%;
+
+            &_mobile {
+                display: none;
+            }
+        }
+
+        &__partner {
+            display: inline-block;
+            vertical-align: middle;
+
+            & + .footer__partner {
+                padding-top: 0;
+            }
+        }
+
+        &__contacts {
+            display: inline-block;
+            vertical-align: middle;
+            width: 49%;
+            min-width: 49%;
+            text-align: right;
+        }
+
+        &__copy {
+            padding: 0 10px 15px 10px;
+        }
+    }
+}
+
+@media (max-width: $mobile-point) {
+    .footer {
+        padding: 0 10px;
+
+        &__container {
+            width: 100%;
+            padding-bottom: 70px;
+        }
+
+        &__menu-block {
+            display: block;
+        }
+
+        &__menu {
+            display: block;
+            width: 100%;
+            text-align: center;
+        }
+
+        &__contacts {
+            width: 100%;
+            text-align: center;
+        }
+
+        &__copy {
+            padding: 0;
+            display: block;
+            bottom: 15px;
+            text-align: center;
+            font-size: 12px;
+        }
+
+        &__medialine {
+            padding-top: 5px;
+        }
+
+        &__partners {
+            display: none;
+
+            &_mobile {
+                display: inline-block;
+                vertical-align: middle;
+                width: 66%;
+                min-width: 66%;
+            }
+        }
+
+        &__partner {
+            max-width: 49%;
+            width: 49%;
+        }
+
+        &__logo {
+            display: inline-block;
+            vertical-align: middle;
+            width: 32%;
+            min-width: 32%;
+        }
+    }
+}

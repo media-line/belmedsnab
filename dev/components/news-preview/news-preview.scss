@@ -1,0 +1,17 @@
+.news-preview {
+    display: flex;
+
+    .single-news {
+        width: 33.3%;
+    }
+}
+
+@media (max-width: $mobile-point) {
+    .news-preview {
+        display: block;
+
+        .single-news {
+            width: 100%;
+        }
+    }
+}

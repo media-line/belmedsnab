@@ -1,0 +1,201 @@
+.accuray-map {
+    &__map {
+        height: 600px;
+        background-position: center top;
+        background-size: contain;
+        background-repeat: no-repeat;
+        position: relative;
+    }
+
+    &__point {
+        position: absolute;
+        width: 170px;
+        padding: 7px 0;
+        text-align: center;
+        font-size: 15px;
+        font-weight: bold;
+        color: #9F1864;
+        background: linear-gradient(#d1d1d1,#ebf0f6,#d1d1d1);
+        border: 0px;
+        border-radius: 15px;
+
+        &_north-america {
+            top: 120px;
+            left: 70px;
+        }
+
+        &_south-america {
+            top: 400px;
+            left: 190px;
+        }
+
+        &_europe {
+            top: 120px;
+            left: 430px;
+        }
+
+        &_cois {
+            top: 90px;
+            left: 620px;
+        }
+
+        &_asia {
+            top: 200px;
+            left: 670px;
+        }
+
+        &_australia {
+            top: 440px;
+            left: 850px;
+        }
+    }
+
+    &__point-tab {
+        font-weight: bold;
+        font-size: 15px;
+        color: $blue;
+        line-height: 1.2em;
+        border: none;
+        background-color: transparent;
+        transition: 0.3s;
+        cursor: pointer;
+
+        &:hover {
+            color: $green;
+        }
+    }
+
+    &__info {
+        display: none;
+
+        &_active {
+            display: block;
+        }
+    }
+
+    &__title {
+        color: $blue;
+        font-size: 24px;
+        font-weight: bold;
+        border-bottom: 2px solid $blue;
+        padding-bottom: 4px;
+
+        &_simple {
+            border-bottom: none;
+            padding-bottom: 10px;
+        }
+    }
+
+    &__name {
+        color: $blue;
+        font-size: 22px;
+        padding-bottom: 5px;
+    }
+
+    &__anchors {
+        padding: 5px 0 20px 0;
+    }
+
+    &__anchor-wrap {
+        padding-right: 5px;
+        display: inline-block;
+
+        & + .accuray-map__anchor-wrap {
+            padding-left: 9px;
+            position: relative;
+
+            &:before {
+                content: '';
+                background-color: $green;
+                height: 12px;
+                width: 1px;
+                display: block;
+                position: absolute;
+                left: 0;
+                top: 5px;
+            }
+        }
+    }
+
+    table {
+        width: 100%;
+        margin-bottom: 25px;
+    }
+
+    td:last-child {
+        text-align: right;
+        font-style: italic;
+    }
+}
+
+@media (max-width: $small-device-point) {
+    .accuray-map {
+        &__map {
+            height: 560px;
+        }
+
+        &__point {
+            &_asia {
+                left: 650px;
+            }
+
+            &_australia {
+                left: 800px;
+            }
+        }
+    }
+}
+
+@media (max-width: $tablet-point) {
+    .accuray-map {
+        &__map {
+            height: 410px;
+        }
+
+        &__point {
+            &_north-america {
+                top: 80px;
+                left: 40px;
+            }
+
+            &_south-america {
+                top: 260px;
+                left: 120px;
+            }
+
+            &_europe {
+                top: 30px;
+                left: 230px;
+            }
+
+            &_cois {
+                top: 60px;
+                left: 410px;
+            }
+
+            &_asia {
+                top: 160px;
+                left: 430px;
+            }
+
+            &_australia {
+                top: 300px;
+                left: 550px;
+            }
+        }
+    }
+}
+
+@media (max-width: $mobile-point) {
+    .accuray-map {
+        &__map {
+            background-image: none !important;
+            height: auto;
+        }
+
+        &__point {
+            position: static;
+            width: 100%;
+        }
+    }
+}

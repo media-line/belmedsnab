@@ -1,0 +1,37 @@
+.bottom-menu {
+    padding: 25px 0;
+
+    &__element {
+        display: inline-block;
+        padding: 0 15px;
+    }
+
+    &__link {
+        font-family: 'trebuchetms';
+        font-size: 16px;
+        color: $white;
+        text-decoration: none;
+        @include link-decoration ($white, 2px, -2px, 0.3s);
+        font-weight: 400;
+
+        &:hover {
+            color: $white;
+        }
+    }
+}
+
+@media (max-width: $small-device-point) {
+    .bottom-menu {
+        &__element {
+            padding: 0 8px;
+        }
+    }
+}
+
+@media (max-width: $mobile-point) {
+    .bottom-menu {
+        &__link {
+            font-size: 14px;
+        }
+    }
+}

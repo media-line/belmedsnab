@@ -1,0 +1,71 @@
+@import './reset';
+
+@font-face {
+    font-family: 'calibri';
+    src: //url('webfont.woff2') format('woff2'),
+        url('./../fonts/Calibri.ttf')  format('truetype'),
+        url('./../fonts/Calibri.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'trebuchetms';
+    src: //url('webfont.woff2') format('woff2'),
+        url('./../fonts/TrebuchetMS.ttf')  format('truetype'),
+        url('./../fonts/TrebuchetMS.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body {
+    font-family: 'calibri', sans-serif;
+}
+
+b {
+    font-weight: 400;
+}
+
+::selection {
+    background-color: $green;
+    color: $white;
+}
+
+p {
+    padding-bottom: 15px;
+}
+
+ul {
+    padding-bottom: 15px;
+
+    li {
+        position: relative;
+
+        & + li {
+            margin-top: 10px;
+        }
+
+        &:before {
+            content: '';
+            height: 5px;
+            width: 5px;
+            border-radius: 100%;
+            background-color: $green;
+            display: block;
+            position: absolute;
+            top: 10px;
+            left: -12px;
+        }
+    }
+}
+
+a {
+    color: $green;
+    transition: 0.5s;
+    font-weight: 700;
+    text-decoration: none;
+
+    &:hover {
+        color: $black-light;
+    }
+}

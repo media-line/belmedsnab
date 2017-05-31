@@ -1,0 +1,66 @@
+.social-buttons {
+    text-align: right;
+    padding-top: 30px;
+
+    &__container {
+        width: $container-big;
+        margin-left: auto;
+        margin-right: auto;
+        display: flex;
+        justify-content: flex-end;
+    }
+
+    &__button {
+        width: 32px;
+        height: 32px;
+        display: inline-block;
+        box-sizing: border-box;
+        border: 2px solid $blue;
+        text-align: center;
+        padding-top: 2px;
+        transition: 0.3s;
+        background-color: transparent;
+
+        svg {
+            max-width: 22px;
+        }
+
+        &:hover {
+            background-color: $blue;
+
+            .vk, .facebook, .google-plus, .twitter, .od {
+                fill: $white;
+            }
+        }
+    }
+
+    .vk, .facebook, .google-plus, .twitter, .od {
+        fill: $blue;
+        transition: 0.3s;
+    }
+}
+
+@media (max-width: $small-device-point) {
+    .social-buttons {
+        &__container {
+            width: $container-small;
+        }
+    }
+}
+
+@media (max-width: $tablet-point) {
+    .social-buttons {
+        &__container {
+            width: $container-table;
+        }
+    }
+}
+
+@media (max-width: $mobile-point) {
+    .social-buttons {
+        &__container {
+            width: 100%;
+            justify-content: center;
+        }
+    }
+}

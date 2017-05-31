@@ -1,0 +1,43 @@
+.catalog-list {
+    &__description {
+        padding-bottom: 30px;
+    }
+
+    &__items {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .catalog-item {
+        width: 33.3%;
+        min-width: 33.3%;
+    }
+
+    &__file {
+        text-align: center;
+        padding-bottom: 30px;
+    }
+
+    &__category {
+        padding-bottom: 30px;
+    }
+
+    &__download {
+        color: $blue !important;
+        font-size: 24px;
+        @include link-decoration-inverse ($blue, 2px, -1px, 0.3s);
+    }
+}
+
+@media (max-width: $mobile-point) {
+    .catalog-list {
+        &__items {
+            display: block;
+        }
+
+        .catalog-item {
+            width: 100%;
+            min-width: 100%;
+        }
+    }
+}

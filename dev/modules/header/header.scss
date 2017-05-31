@@ -1,0 +1,116 @@
+.header {
+    background: linear-gradient(to bottom, $blue, $blue-light, $blue);
+    overflow-x: hidden;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 5;
+
+    &__container {
+        width: $container-big;
+        margin-left: auto;
+        margin-right: auto;
+        display: flex;
+        justify-content: space-between;
+        align-items: stretch;
+        position: relative;
+    }
+
+    &__logo {
+        width: 240px;
+        min-width: 240px;
+        text-align: center;
+        padding: 20px 0;
+        position: relative;
+        display: flex;
+        align-items: center;
+
+        img {
+            width: 90%;
+        }
+
+        a {
+            display: block;
+        }
+    }
+
+    &__menu {
+        width: 100%;
+    }
+
+    &__partners {
+        width: 210px;
+        min-width: 210px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    &__partner {
+        text-align: center;
+
+        & + .header__partner {
+            padding-top: 15px;
+        }
+
+        img {
+            max-width: 90%;
+        }
+    }
+
+    &__menu-button {
+        display: none;
+    }
+}
+
+@media (max-width: $small-device-point) {
+    .header {
+        &__container {
+            width: $container-small;
+        }
+
+        &__logo {
+            width: 150px;
+            min-width: 150px;
+        }
+
+        &__partners {
+            width: 150px;
+            min-width: 150px;
+        }
+    }
+}
+
+@media (max-width: $tablet-point) {
+    .header {
+        &__container {
+            width: $container-table;
+        }
+
+        &__partners {
+            display: none;
+        }
+    }
+}
+
+@media (max-width: $mobile-point) {
+    .header {
+        background: $blue;
+
+        &__container {
+            width: 100%;
+            display: block;
+        }
+
+        &__menu-button {
+            display: block;
+        }
+
+        &__logo {
+            width: 220px;
+            min-width: 220px;
+        }
+    }
+}
