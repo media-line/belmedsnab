@@ -18,8 +18,8 @@
     }
 
     &__logo {
-        width: 240px;
-        min-width: 240px;
+        width: 280px;
+        min-width: 280px;
         text-align: center;
         padding: 20px 0;
         position: relative;
@@ -32,6 +32,8 @@
 
         a {
             display: block;
+            width: 100%;
+            min-width: 100%;
         }
     }
 
@@ -40,8 +42,8 @@
     }
 
     &__partners {
-        width: 210px;
-        min-width: 210px;
+        width: 190px;
+        min-width: 190px;
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -56,7 +58,7 @@
         }
 
         img {
-            max-width: 90%;
+            max-width: 95%;
         }
     }
 

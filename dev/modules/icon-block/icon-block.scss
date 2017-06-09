@@ -1,10 +1,16 @@
 .icon-block {
     text-align: center;
     padding-bottom: 10px;
+    display: inline-block;
+    transition: 0.3s;
+    color: $black-light;
+
+    &:hover {
+        color: $green;
+    }
 
     &__title {
         font-size: 21px;
-        color: $black-light;
     }
 
     &__img {

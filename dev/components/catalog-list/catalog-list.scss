@@ -11,6 +11,8 @@
     .catalog-item {
         width: 33.3%;
         min-width: 33.3%;
+        padding-left: 1.5%;
+        padding-right: 1.5%;
     }
 
     &__file {
@@ -23,9 +25,14 @@
     }
 
     &__download {
-        color: $blue !important;
+        color: $blue;
         font-size: 24px;
-        @include link-decoration-inverse ($blue, 2px, -1px, 0.3s);
+        display: inline-block;
+        transition: 0.3s;
+
+        &:hover {
+            color: $green;
+        }
     }
 }
 
@@ -38,6 +45,10 @@
         .catalog-item {
             width: 100%;
             min-width: 100%;
+
+            &_empty {
+                display: none;
+            }
         }
     }
 }

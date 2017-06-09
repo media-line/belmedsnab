@@ -5,7 +5,7 @@
 
     &__element {
         display: inline-block;
-        padding: 0 17px;
+        padding: 0 14px;
     }
 
     &__link {
@@ -17,7 +17,7 @@
     }
 
     &__top {
-        padding: 15px 0;
+        padding: 18px 0;
         text-align: center;
 
         .top-menu__link {
@@ -33,7 +33,7 @@
     }
 
     &__bottom {
-        padding: 17px 0;
+        padding: 19px 0;
         border-radius: 5px 5px 0 0;
         background-color: $white-dark;
         margin-top: auto;
@@ -42,11 +42,14 @@
         .top-menu__link {
             color: $blue;
             @include link-decoration ($blue-light, 1px, 0, 0.3s);
+            font-family: 'calibri';
+            font-size: 16px;
+            font-weight: 600;
         }
 
         .top-menu__element {
             & + .top-menu__element {
-               border-left: 1px solid $blue-light;
+               border-left: 2px solid $blue-light;
            }
         }
     }
